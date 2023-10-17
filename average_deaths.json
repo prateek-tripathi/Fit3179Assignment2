@@ -8,12 +8,93 @@
     "format": { "type": "csv" }
   },
   "transform": [
-    {"filter": "datum.Year >= 1990 && datum.Year <= 2017"},
-    {"aggregate": [{"op": "mean", "field": "Air pollution (total) (deaths per 100,000)", "as": "average_deaths"}], "groupby": ["Year"]}
+    {
+      "filter": {
+        "field": "Year",
+        "range": [1990, 2017]
+      }
+    },
+    {
+      "filter": {
+        "field": "Entity",
+        "oneOf": ["India", "Australia", "Malaysia", "World","China",
+          "United States","Russia","Brazil","Indonesia","Mexico","Japan","Germany","France","United Kingdom","Canada","South Korea","Saudi Arabia","South Africa","Egypt", "Turkey","Italy", "Spain","Argentina","Sweden","Norway","New Zealand","Thailand","Vietnam" ]
+      }
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Air pollution (total) (deaths per 100,000)",
+          "as": "average_deaths"
+        }
+      ],
+      "groupby": ["Year", "Entity"]
+    }
   ],
   "mark": "line",
   "encoding": {
-    "x": { "field": "Year", "type": "nominal", "axis": {"title": "Year"} },
-    "y": { "field": "average_deaths", "type": "quantitative", "axis": {"title": "Average Deaths"} }
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "axis": {"title": "Year"}
+    },
+    "y": {
+      "field": "average_deaths",
+      "type": "quantitative",
+      "axis": {"title": "Average Deaths"}
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "legend": {"title": "Select Country"},
+      "scale": {"scheme": "category20"} 
+    },
+    "opacity": {
+      "condition": {
+        "selection": "country",
+        "value": 1
+      },
+      "value": 0.2
+    }
+  },
+  "selection": {
+    "country": {
+      "type": "multi", 
+      "fields": ["Entity"],
+      "bind": {
+        "input": "select",
+        "options": [
+          "India",
+          "Australia",
+          "Malaysia",
+          "World",
+          "China",
+          "United States",
+          "Russia",
+          "Brazil",
+          "Indonesia",
+          "Mexico",
+          "Japan",
+          "Germany",
+          "France",
+          "United Kingdom",
+          "Canada",
+          "South Korea",
+          "Saudi Arabia",
+          "South Africa",
+          "Egypt",
+          "Turkey",
+          "Italy",
+          "Spain",
+          "Argentina",
+          "Sweden",
+          "Norway",
+          "New Zealand",
+          "Thailand",
+          "Vietnam"
+        ]
+      }
+    }
   }
 }
