@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800, 
+  "height": 350,
+  "title": { "text": "Top 5 Countries with Most and Least Deaths" },
+  "hconcat": [  
+    {
+      "width": 400,
+      "height": 350,
+      "data": {
+        "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/top_5_country_deaths.csv",
+        "format": { "type": "csv" }
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Entity",
+          "type": "ordinal",
+          "sort": "",
+          "axis": { "title": "Country" }
+        },
+        "y": {
+          "field": "Total_Deaths",
+          "type": "quantitative",
+          "axis": { "title": "Total Deaths (all years)" }
+        },
+        "color": {
+          "field": "Entity",
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    },
+    {
+      "width": 400,
+      "height": 350,
+      "data": {
+        "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/bottom_5_country_deaths.csv",
+        "format": { "type": "csv" }
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Entity",
+          "type": "ordinal",
+          "sort": "y",  
+          "axis": { "title": "Country" }
+        },
+        "y": {
+          "field": "Total_Deaths",
+          "type": "quantitative",
+          "axis": { "title": "Total Deaths (all years)" }
+        },
+        "color": {
+          "field": "Entity",
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "hconcat": [
+    {
+      "vconcat": [
+        {
+          "width": 400,
+          "height": 350,
+          "data": {
+            "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
+            "format": { "type": "csv" }
+          },
+          "transform": [
+            {"filter": "datum.Year >= 1990 && datum.Year <= 2017"}
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Air pollution (total) (deaths per 100,000)",
+              "type": "quantitative",
+              "bin": {"maxbins": 50}, 
+              "axis": {"title": "Air Pollution (deaths per 100,000)"}
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "axis": {"title": "Frequency"}
+            }
+          }
+        },
+        {
+          "width": 400,
+          "height": 350,
+          "data": {
+            "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
+            "format": { "type": "csv" }
+          },
+          "transform": [
+            {"filter": "datum.Year >= 1990 && datum.Year <= 2017"}
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Outdoor particulate matter (deaths per 100,000)",
+              "type": "quantitative",
+              "bin": {"maxbins": 50}, 
+              "axis": {"title": "Outdoor Particulate Matter (deaths per 100,000)"}
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "axis": {"title": "Frequency"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "vconcat": [
+        {
+          "width": 400,
+          "height": 350,
+          "data": {
+            "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
+            "format": { "type": "csv" }
+          },
+          "transform": [
+            {"filter": "datum.Year >= 1990 && datum.Year <= 2017"}
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Outdoor ozone pollution (deaths per 100,000)",
+              "type": "quantitative",
+              "bin": {"maxbins": 50}, 
+              "axis": {"title":"Outdoor ozone pollution (deaths per 100,000)"}
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "axis": {"title": "Frequency"}
+            }
+          }
+        },
+        {
+          "width": 400,
+          "height": 350,
+          "data": {
+            "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
+            "format": { "type": "csv" }
+          },
+          "transform": [
+            {"filter": "datum.Year >= 1990 && datum.Year <= 2017"}
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Indoor air pollution (deaths per 100,000)",
+              "type": "quantitative",
+              "bin": {"maxbins": 50}, 
+              "axis": {"title":"Indoor air pollution (deaths per 100,000)"}
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "axis": {"title": "Frequency"}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

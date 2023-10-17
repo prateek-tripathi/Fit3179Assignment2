@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": { "text": "Average Deaths from 1990 to 2017" },
+  "data": {
+    "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
+    "format": { "type": "csv" }
+  },
+  "transform": [
+    {"filter": "datum.Year >= 1990 && datum.Year <= 2017"},
+    {"aggregate": [{"op": "mean", "field": "Air pollution (total) (deaths per 100,000)", "as": "average_deaths"}], "groupby": ["Year"]}
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": { "field": "Year", "type": "nominal", "axis": {"title": "Year"} },
+    "y": { "field": "average_deaths", "type": "quantitative", "axis": {"title": "Average Deaths"} }
+  }
+}
