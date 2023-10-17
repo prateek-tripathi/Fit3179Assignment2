@@ -1,7 +1,7 @@
-var vg_4 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/average_deaths.json";
-var vg_2 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/Map_viz";
+var vg_2 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/average_deaths.json";
+var vg_1 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/Map_viz";
 var vg_3 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/multiple_histogram";
-var vg_1 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/Most_least_deaths";
+var vg_4 = "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/Most_least_deaths";
 
 
 vegaEmbed("#viz1", vg_1,{ "actions": false }).then(function (result) {
