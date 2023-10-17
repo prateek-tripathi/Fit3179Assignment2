@@ -2,9 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800, 
   "height": 350,
-  "title": { "text": "Top 5 Countries with Most and Least Deaths" },
   "hconcat": [  
     {
+      "title": "Top 5 Countries with most Deaths",
       "width": 400,
       "height": 350,
       "data": {
@@ -32,6 +32,7 @@
       }
     },
     {
+      "title": "Top 5 Countries with least Deaths",
       "width": 400,
       "height": 350,
       "data": {
