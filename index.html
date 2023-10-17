@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>   
     <title> Data Visualization 2 - 31835643 </title>
+    <style> body { background-color: #f0f0f0 } </style>
+    
 </head>
 
 <body>
@@ -19,13 +21,25 @@
         <br> This infographic is made to visualize the trends and patterns on the deaths caused by Air Pollution
             from the years 1990 to 2017, compiled by Kaggle. <br>
     </h3>
-
+    <h2>Air Pollution-Related Deaths by Country (1990-2017)</h2>
+    <p class="paragraph">
+        This interactive world map illustrates air pollution-related deaths by country from 1990 to 2017. Initially displaying 1990
+        data, users can scroll through the years to observe changes over time. Each country is color-coded to represent the death rate 
+        attributed to air pollution. Darker shades indicate higher mortality rates, allowing users to explore the evolving impact of 
+        air pollution on different countries. This dynamic map offers a global perspective on the changes in air pollution-related 
+        deaths over nearly three decades.
+    </p>
     <div class="viz-section-col">
         <div id="viz1" class="viz-container">
-                <!-- INSERT VISUALIZATION 1  HERE -->
+                <!-- INSERT VISUALIZATION 1  HERE --> 
         </div>
         <p> <span style="color:rgb(81, 81, 81); font-weight: bold;"> </p>
-
+        <h2>Average Deaths Over Time</h2>
+        <p class="paragraph">
+            The line chart presents the trend in average air pollution-related deaths per year. Over the years, the chart reveals a 
+            steady decrease in deaths, highlighting global efforts to combat air pollution's impact on public health. This long-term 
+            trend provides a compelling narrative of progress in addressing air quality issues.
+        </p>
         <div class="viz-section-row">
             <div id="viz2" class="viz-container">
                 <!-- INSERT VISUALIZATION 2 HERE -->
@@ -35,24 +49,61 @@
         
         <div class="viz-section-row">
             <div id="viz2-text">
-                <br><br><br><br><br>
+                <h2>Histograms for Different Air Pollution Attributes</h2>
+                <p class="paragraph">
+                    This section includes four histograms, each focusing on different attributes related to air pollution and their 
+                    impact on public health:
+                </p>   
+                <p class="paragraph">
+                    <h4>Total Air Pollution-Related Deaths</h4>
+                        This histogram displays the distribution of deaths attributed to total air pollution from 1990 to 2017. It 
+                        allows users to understand the broad impact of air pollution on public health.
+                </p>
+                <p class="paragraph">
+                    <h4>Indoor Air Pollution-Related Deaths</h4>
+                        This histogram focuses on deaths related to indoor air pollution, offering insights into health risks within 
+                        homes and indoor environments.
+                </p>
+                <p class="paragraph">     
+                    <h4>Particulate Matter-Related Deaths</h4> 
+                        This histogram explores deaths associated with outdoor particulate matter, a key component of air pollution. 
+                        Users can grasp the specific impact of particulate matter on public health.
+                </p>
+                <p class="paragraph">
+                    <h4>Outdoor Ozone Pollution-Related Deaths</h4>
+                        This histogram delves into deaths resulting from outdoor ozone pollution, shedding light on the adverse effects 
+                        of ozone in the atmosphere.
+                </p>
             </div>
         </div>
 
         <div class="viz-section-row" style="flex-direction: row-reverse;">
-            <div id="viz2-text">
-                
-                <br><br><br><br><br>
-            
-            </div>
+
             <div id="viz3" class="viz-container">
                 <!-- INSERT VISUALIZATION 3 HERE -->
             </div>
         </div>
+        <h2>Top 5 Countries with Most and Least Deaths</h2>
+        <p class="paragraph">
+            This section features two bar charts that highlight the top 5 countries with the most and the least deaths related to air 
+            pollution. These charts provide a direct comparison of the countries facing the most significant challenges in managing air 
+            pollution-related deaths and those that have made substantial progress in reducing their impact. The "most deaths" chart 
+            serves as a call to action, emphasizing areas where interventions are urgently needed. In contrast, the "least deaths" 
+            chart offers inspiration by showcasing success stories in air quality management. These visuals are instrumental in framing 
+            the global context of air pollution-related deaths.
+        </p>
         <div id="viz4" class="viz-container">
             <!-- INSERT VISUALIZATION 4 HERE -->
         </div>
-
+        <h2>Conclusion</h2>
+        <p class="paragraph"> 
+            This visualization provides a comprehensive exploration of air pollution-related deaths spanning nearly three decades. It 
+            reveals a promising trend of decreasing mortality rates due to collective efforts and policies aimed at improving air 
+            quality. Through interactive maps, trend charts, histograms, and comparative bar charts, users gain insights into specific 
+            attributes of air pollution and global variations. This visualization serves as a powerful tool to raise awareness, inform 
+            policymakers, and inspire positive changes in air quality management, emphasizing the urgent need for continued efforts in 
+            safeguarding public health.
+        </p>
     </div>
     <script src="data_viz.js"></script> 
 

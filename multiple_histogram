@@ -4,8 +4,8 @@
     {
       "vconcat": [
         {
-          "width": 400,
-          "height": 350,
+          "width": 800,
+          "height": 700,
           "data": {
             "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
             "format": { "type": "csv" }
@@ -29,8 +29,8 @@
           }
         },
         {
-          "width": 400,
-          "height": 350,
+          "width": 800,
+          "height": 700,
           "data": {
             "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
             "format": { "type": "csv" }
@@ -58,8 +58,8 @@
     {
       "vconcat": [
         {
-          "width": 400,
-          "height": 350,
+          "width": 800,
+          "height": 700,
           "data": {
             "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
             "format": { "type": "csv" }
@@ -83,8 +83,8 @@
           }
         },
         {
-          "width": 400,
-          "height": 350,
+          "width": 800,
+          "height": 700,
           "data": {
             "url": "https://raw.githubusercontent.com/prateek-tripathi/Fit3179Assignment2/main/data/death-rates-from-air-pollution.csv",
             "format": { "type": "csv" }
